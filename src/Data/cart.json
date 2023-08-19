@@ -1,0 +1,34 @@
+[
+  {
+    "id": 4,
+    "title": "Call of Duty: Modern Warfare",
+    "description": "Engage in intense battles in an action-packed and realistic first-person shooter.",
+    "price": 59.99,
+    "rating": 4.7,
+    "stock": 8,
+    "genre": "Shooters",
+    "thumbnail": "https://ejemplo.com/thumbnails/call_of_duty_modern_warfare.jpg",
+    "images": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXiWxjM9Zp24ufYD5M1cuk-88aGtPoiZDmZI1B2mtmqbPrddsbbPRvbIUHdOM-EbEzyg&usqp=CAU",
+      "https://www.xboxdynasty.de/wp-content/uploads/2019/05/call-of-duty-modern-warfare-31-720x405.jpg.pagespeed.ce.qe9V8JvfbE.jpg",
+      "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2022/06/codmw2gameplay.jpg?resize=750%2C400&ssl=1"
+    ],
+        "quantity": 1
+    },
+    {
+      "id": 6,
+      "title": "World of Warcraft",
+      "description": "Enter a vast fantasy world and join millions of players in this multiplayer online role-playing experience.",
+      "price": 14.99,
+      "rating": 4.6,
+      "stock": 15,
+      "genre": "MMORPG",
+      "thumbnail": "https://ejemplo.com/thumbnails/world_of_warcraft.jpg",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcSWkzBlo7Nkb1oVlYxe3lJ_SGrjpOe67w4-W7_fwlFYPnBnJEqZ8HVrhk3nIQ7yuJ7w8&usqp=CAU",
+        "https://www.gamespot.com/a/uploads/original/1647/16470614/4076625-wowdragonflightseason1launch.jpg",
+        "https://images.blz-contentstack.com/v3/assets/bltf408a0557f4e4998/blte9bb4625acc822e0/63c7246c796bd63442eb02c5/world-of-warcraft-dragonflight-section1-feature1.png?width=&format=webply&dpr=2&disable=upscale&quality=80"
+      ],
+        "quantity": 1
+    }
+]

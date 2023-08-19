@@ -1,0 +1,108 @@
+[
+    {
+      "id": 1,
+      "title": "Super Mario Odyssey",
+      "description": "Join Mario on an exciting adventure to rescue Princess Peach from Bowser's clutches.",
+      "price": 59.99,
+      "rating": 4.5,
+      "stock": 10,
+      "genre": "Platform",
+      "thumbnail": "https://helios-i.mashable.com/imagery/articles/04TadC8nvAHBpHCYBjZth2X/hero-image.fill.size_1248x702.v1623363804.jpg",
+      "images": [
+        "https://media.vandal.net/t200/43395/super-mario-odyssey-2017102611035_25.jpg",
+        "https://helios-i.mashable.com/imagery/articles/04TadC8nvAHBpHCYBjZth2X/hero-image.fill.size_1248x702.v1623363804.jpg",
+        "https://techcrunch.com/wp-content/uploads/2017/10/mario1.jpg?w=1390&crop=1",
+        "https://www.rtlnieuws.nl/sites/default/files/content/images/2017/10/26/mario_zwembroek.jpg?itok=UqS0kMUr&width=2048&height=1152&impolicy=semi_dynamic"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "The Legend of Zelda: Breath of the Wild",
+      "description": "Explore the vast open world of Hyrule and discover its secrets in this critically acclaimed installment of the Zelda series.",
+      "price": 49.99,
+      "rating": 4.8,
+      "stock": 5,
+      "genre": "Adventure",
+      "thumbnail": "https://www.giantbomb.com/a/uploads/scale_small/0/3699/2920687-the%20legend%20of%20zelda%20-%20breath%20of%20the%20wild%20v7.jpg",
+      "images": [
+        "https://www.giantbomb.com/a/uploads/scale_small/0/3699/2920687-the%20legend%20of%20zelda%20-%20breath%20of%20the%20wild%20v7.jpg",
+        "https://images2.minutemediacdn.com/image/fetch/w_850,h_560,c_fill,g_auto,f_auto/https%3A%2F%2Ffansided.com%2Ffiles%2F2017%2F01%2Fzelda-one.jpg",
+        "https://ejemplo.com/images/zelda_breath_of_the_wild_3.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Red Dead Redemption 2",
+      "description": "Live the life of an outlaw in the Wild West and survive in an unforgiving world filled with danger.",
+      "price": 39.99,
+      "rating": 4.9,
+      "stock": 3,
+      "genre": "Action & Adventure",
+      "thumbnail": "https://img.youtube.com/vi/HVRzx17WHVk/0.jpg",
+      "images": [
+        "https://img.youtube.com/vi/HVRzx17WHVk/0.jpg",
+        "https://cdn.vox-cdn.com/thumbor/9jjwdUMeb0lq8Zgl7VkIb80GrHw=/0x0:3840x2160/2070x1164/filters:focal(1652x287:2266x901):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/61473239/red_dead_redemption_2_screenshot_066_3840.0.jpg",
+        "https://www.telegraph.co.uk/content/dam/gaming/2018/02/06/Red-Dead-Redemption-2-3_trans_NvBQzQNjv4BqNJjoeBT78QIaYdkJdEY4CnGTJFJS74MYhNY6w3GNbO8.jpg?imwidth=1280"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Call of Duty: Modern Warfare",
+      "description": "Engage in intense battles in an action-packed and realistic first-person shooter.",
+      "price": 59.99,
+      "rating": 4.7,
+      "stock": 8,
+      "genre": "Shooters",
+      "thumbnail": "https://ejemplo.com/thumbnails/call_of_duty_modern_warfare.jpg",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkXiWxjM9Zp24ufYD5M1cuk-88aGtPoiZDmZI1B2mtmqbPrddsbbPRvbIUHdOM-EbEzyg&usqp=CAU",
+        "https://www.xboxdynasty.de/wp-content/uploads/2019/05/call-of-duty-modern-warfare-31-720x405.jpg.pagespeed.ce.qe9V8JvfbE.jpg",
+        "https://i0.wp.com/www.pcmrace.com/wp-content/uploads/2022/06/codmw2gameplay.jpg?resize=750%2C400&ssl=1"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "The Witcher 3: Wild Hunt",
+      "description": "Embark on an epic monster hunt and discover a world filled with moral choices and exciting adventures.",
+      "price": 29.99,
+      "rating": 4.9,
+      "stock": 2,
+      "genre": "RPG",
+      "thumbnail": "https://picfiles.alphacoders.com/198/thumb-198636.jpg",
+      "images": [
+        "https://picfiles.alphacoders.com/198/thumb-198636.jpg",
+        "https://images2.alphacoders.com/131/1316068.png",
+        "https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-witcher-3/e/ed/Velen_WD_Boss_hound.png?width=325"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "World of Warcraft",
+      "description": "Enter a vast fantasy world and join millions of players in this multiplayer online role-playing experience.",
+      "price": 14.99,
+      "rating": 4.6,
+      "stock": 15,
+      "genre": "MMORPG",
+      "thumbnail": "https://ejemplo.com/thumbnails/world_of_warcraft.jpg",
+      "images": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcSWkzBlo7Nkb1oVlYxe3lJ_SGrjpOe67w4-W7_fwlFYPnBnJEqZ8HVrhk3nIQ7yuJ7w8&usqp=CAU",
+        "https://www.gamespot.com/a/uploads/original/1647/16470614/4076625-wowdragonflightseason1launch.jpg",
+        "https://images.blz-contentstack.com/v3/assets/bltf408a0557f4e4998/blte9bb4625acc822e0/63c7246c796bd63442eb02c5/world-of-warcraft-dragonflight-section1-feature1.png?width=&format=webply&dpr=2&disable=upscale&quality=80"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Dark Souls III",
+      "description": "Immerse yourself in a dark and challenging world filled with monsters and epic bosses in this action RPG.",
+      "price": 39.99,
+      "rating": 4.8,
+      "stock": 6,
+      "genre": "Action role",
+      "thumbnail": "https://www.stripes.com/living/migrated.image.Image_55210132.jpg/alternates/LANDSCAPE_910/migrated.image.Image_55210132.jpg",
+      "images": [
+        "https://www.stripes.com/living/migrated.image.Image_55210132.jpg/alternates/LANDSCAPE_910/migrated.image.Image_55210132.jpg",
+        "https://i0.wp.com/vgkami.com/wp-content/uploads/2021/11/iudex-gundyr.jpg?resize=1024%2C576&ssl=1",
+        "https://i0.wp.com/vgkami.com/wp-content/uploads/2021/11/abyss-watchers.jpg?resize=1024%2C576&ssl=1"
+      ]
+    }
+  ]

@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "userId": 2,
+        "createdAt": 1679869276580,
+        "items": [
+            {
+                "id": 2,
+                "title": "The Legend of Zelda: Breath of the Wild",
+                "description": "Explore the vast open world of Hyrule and discover its secrets in this critically acclaimed installment of the Zelda series.",
+                "price": 49.99,
+                "rating": 4.8,
+                "stock": 5,
+                "genre": "Adventure",
+                "thumbnail": "https://www.giantbomb.com/a/uploads/scale_small/0/3699/2920687-the%20legend%20of%20zelda%20-%20breath%20of%20the%20wild%20v7.jpg",
+                "images": [
+                  "https://www.giantbomb.com/a/uploads/scale_small/0/3699/2920687-the%20legend%20of%20zelda%20-%20breath%20of%20the%20wild%20v7.jpg",
+                  "https://images2.minutemediacdn.com/image/fetch/w_850,h_560,c_fill,g_auto,f_auto/https%3A%2F%2Ffansided.com%2Ffiles%2F2017%2F01%2Fzelda-one.jpg",
+                  "https://ejemplo.com/images/zelda_breath_of_the_wild_3.jpg"
+                  
+                ],
+                "quantity": 2
+              },
+              {
+                "id": 5,
+                "title": "The Witcher 3: Wild Hunt",
+                "description": "Embark on an epic monster hunt and discover a world filled with moral choices and exciting adventures.",
+                "price": 29.99,
+                "rating": 4.9,
+                "stock": 2,
+                "genre": "RPG",
+                "thumbnail": "https://picfiles.alphacoders.com/198/thumb-198636.jpg",
+                "images": [
+                  "https://picfiles.alphacoders.com/198/thumb-198636.jpg",
+                  "https://images2.alphacoders.com/131/1316068.png",
+                  "https://oyster.ignimgs.com/mediawiki/apis.ign.com/the-witcher-3/e/ed/Velen_WD_Boss_hound.png?width=325"
+                ],
+                "quantity": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "userId": 2,
+        "createdAt": 1679832276580,
+        "items": [
+            {
+                "id": 7,
+                "title": "Dark Souls III",
+                "description": "Immerse yourself in a dark and challenging world filled with monsters and epic bosses in this action RPG.",
+                "price": 39.99,
+                "rating": 4.8,
+                "stock": 6,
+                "genre": "Action role",
+                "thumbnail": "https://www.stripes.com/living/migrated.image.Image_55210132.jpg/alternates/LANDSCAPE_910/migrated.image.Image_55210132.jpg",
+                "images": [
+                  "https://www.stripes.com/living/migrated.image.Image_55210132.jpg/alternates/LANDSCAPE_910/migrated.image.Image_55210132.jpg",
+                  "https://i0.wp.com/vgkami.com/wp-content/uploads/2021/11/iudex-gundyr.jpg?resize=1024%2C576&ssl=1",
+                  "https://i0.wp.com/vgkami.com/wp-content/uploads/2021/11/abyss-watchers.jpg?resize=1024%2C576&ssl=1"
+                ],
+                "quantity": 1
+              },
+              {
+                "id": 1,
+                "title": "Super Mario Odyssey",
+                "description": "Join Mario on an exciting adventure to rescue Princess Peach from Bowser's clutches..",
+                "price": 59.99,
+                "rating": 4.5,
+                "stock": 10,
+                "genre": "Platform",
+                "thumbnail": "https://helios-i.mashable.com/imagery/articles/04TadC8nvAHBpHCYBjZth2X/hero-image.fill.size_1248x702.v1623363804.jpg",
+                "images": [
+                  "https://media.vandal.net/t200/43395/super-mario-odyssey-2017102611035_25.jpg",
+                  "https://helios-i.mashable.com/imagery/articles/04TadC8nvAHBpHCYBjZth2X/hero-image.fill.size_1248x702.v1623363804.jpg",
+                  "https://techcrunch.com/wp-content/uploads/2017/10/mario1.jpg?w=1390&crop=1",
+                  "https://www.rtlnieuws.nl/sites/default/files/content/images/2017/10/26/mario_zwembroek.jpg?itok=UqS0kMUr&width=2048&height=1152&impolicy=semi_dynamic"
+                ],
+                "quantity": 1
+            }
+        ]
+    }
+]
