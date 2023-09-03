@@ -5,7 +5,7 @@ import OrderItem from '../Components/OrderItem'
 
 const OrderScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
         <FlatList
             data={OrderData}
             keyExtractor={orderItem => orderItem.id}
@@ -23,4 +23,9 @@ const OrderScreen = () => {
 
 export default OrderScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#000080',
+  },
+})
