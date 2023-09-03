@@ -20,12 +20,12 @@ const Cart = () => {
             }}
         />
         <View style={styles.totalContainer}>
-            <Pressable>
-                <Text>
+            <Pressable >
+                <Text style={styles.text}>
                     Confirm
                 </Text>
             </Pressable>
-            <Text>Total: ${total}</Text>
+            <Text style={styles.text}>Total: ${total}</Text>
         </View>
     </View>
   )
@@ -37,11 +37,16 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'space-between',
         flex: 1,
+        backgroundColor:'#000080'
     },
     totalContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         alignItems: 'center',
         paddingBottom: 20,
+    },
+    text:
+    {
+        color:'#FFFFFF'
     }
 })
