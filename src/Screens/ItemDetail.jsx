@@ -50,7 +50,7 @@ const ItemDetail = ({route}) => {
               
               }}
             >
-              <Text style={styles.buttonText}>Agregar al carrito</Text>
+              <Text style={styles.buttonText}>Add to Cart</Text>
             </Pressable>
             <Counter style={styles.Counter} />
           </View>
