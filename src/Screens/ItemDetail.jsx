@@ -12,7 +12,7 @@ import allProducts from "../Data/products.json";
 import { colors } from "../Global/Colors";
 import Counter from "../Components/Counter";
 
-const ItemDetail = ({ navigation, route }) => {
+const ItemDetail = ({route}) => {
   const { productId: idSelected } = route.params;
 
   const [product, setProduct] = useState(null);
@@ -47,12 +47,12 @@ const ItemDetail = ({ navigation, route }) => {
             <Pressable
               style={styles.addButton}
               onPress={() => {
-                // Handle add to cart logic
+              
               }}
             >
               <Text style={styles.buttonText}>Agregar al carrito</Text>
             </Pressable>
-            <Counter />
+            <Counter style={styles.Counter} />
           </View>
         </View>
       )}
@@ -65,66 +65,60 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.indigo,
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "center"
   },
   mainContainer: {
-    width:'90%',
-    height:'80%',
+    width:'auto',
+    height:'auto',
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     padding: 20,
-    backgroundColor: colors.white,
-    borderRadius: 10,
-    shadowColor: colors.black,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    backgroundColor: colors.indigo,
+    elevation: 5
   },
   mainContainerLandscape: {
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "flex-start",
+    alignItems: "flex-start"
   },
   image: {
-    width: 400,
-    height: 150,
+    width: 398,
+    height: 390,
     borderRadius: 10,
   },
   textContainer: {
-    padding: 10,
+    padding: 8
   },
   titleText: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: "bold",
-    color: colors.black,
-    marginBottom: 10,
+    color: colors.white,
+    marginBottom: 8
   },
   descriptionText: {
     fontSize: 16,
-    color: colors.gray,
-    marginBottom: 15,
+    color: colors.white,
+    marginBottom: 15
   },
   priceText: {
     fontSize: 20,
     fontWeight: "bold",
-    color: colors.black,
-    marginBottom: 15,
+    color: colors.white,
+    marginBottom: 15
   },
   addButton: {
-    paddingVertical: 10,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     borderRadius: 5,
-    alignSelf: "flex-start",
-    marginBottom: 15,
+    alignSelf: "flex-end",
+    marginBottom: 15
   },
   buttonText: {
     color: colors.white,
     fontSize: 16,
+    border: '5px solid #000',
+    borderRadius:5,
+    backgroundColor: colors.black
   },
 });
 
