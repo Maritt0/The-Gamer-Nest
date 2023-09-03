@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
         width: '90%',
         borderWidth: 0,
         borderBottomWidth: 3,
-        borderBottomColor: colors.peach,
+        borderBottomColor: colors.black,
         padding: 2,
         fontFamily: 'Josefin',
         fontSize: 14,
