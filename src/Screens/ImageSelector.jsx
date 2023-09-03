@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "flex-start",
         gap: 20,
-        marginTop: 20,
+        backgroundColor:colors.indigo
     },
     image: {
         width: 200,
@@ -107,9 +107,11 @@ const styles = StyleSheet.create({
         width: 200,
         height: 200,
         borderWidth: 2,
-        borderColor: colors.red,
+        borderColor: colors.black,
+        marginTop: 20,
         padding: 10,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor:colors.white
     },
 });
