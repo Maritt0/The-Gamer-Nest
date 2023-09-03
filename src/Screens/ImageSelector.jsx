@@ -25,7 +25,7 @@ const ImageSelector = ({ navigation }) => {
 
     const pickImage = async () => {
 
-      
+        
         const isCameraOk = await verifyCameraPermissions();
 
         if (isCameraOk) {
@@ -34,7 +34,7 @@ const ImageSelector = ({ navigation }) => {
                 mediaTypes: ImagePicker.MediaTypeOptions.All,
                 allowsEditing: true,
                 aspect: [1, 1],
-                //base64: true,
+               
                 quality: 1,
             });
 
@@ -60,7 +60,7 @@ const ImageSelector = ({ navigation }) => {
                     image: response.uri,
                     localId: localId,
                 });
-              
+                
                 dispatch(saveImage(response.uri));
             }
         } catch (error) {
