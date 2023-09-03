@@ -4,6 +4,7 @@ import AddButton from "../Components/AddButton";
 import * as ImagePicker from 'expo-image-picker'
 import { useSelector } from "react-redux";
 import { useGetProfileImageQuery } from "../Services/shopServices";
+import { colors } from "../Global/Colors";
 
 const MyProfile = ({navigation}) => {
     
@@ -46,11 +47,9 @@ export default MyProfile;
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
-        gap: 15,
         alignItems: "center",
         justifyContent: "flex-start",
-        backgroundColor: '#000080',
+        backgroundColor: colors.steelBlue,
     },
     image: {
         width: 100,
@@ -58,4 +57,3 @@ const styles = StyleSheet.create({
         borderRadius: 50,
     },
 });
-
