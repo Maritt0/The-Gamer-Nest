@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         borderBottomColor: colors.secondary,
     },
     text: {
-        fontSize: 30,
+        fontSize: 20,
         fontFamily: "Josefin",
         color: "black",
     },
@@ -63,3 +63,4 @@ const styles = StyleSheet.create({
         backgroundColor: colors.secondary,
     },
 });
+
