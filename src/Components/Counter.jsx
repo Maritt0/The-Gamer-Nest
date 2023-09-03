@@ -35,32 +35,35 @@ export default Counter;
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "column",
-        justifyContent: "center",
+        paddingHorizontal: 10,
+        borderRadius: 5,
+        alignSelf: "flex-end",
+        marginBottom: 15,
         alignItems: "center",
         width:'40%',
-        backgroundColor: colors.skyBlue,
-        padding: 15,
+        backgroundColor: colors.indigo,
+        padding: 5
     },
     buttonsContainer: {
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center",
-        
+        alignItems: "center"
     },
     button: {
         padding: 10,
-        backgroundColor: colors.red,
+        backgroundColor: colors.black
     },
     span: {
-        backgroundColor: colors.red,
+        backgroundColor: colors.black,
         width: "50%",
         padding: 10,
         textAlign: "center",
         fontSize: 14,
+        color:colors.white
     },
     buttonText: {
         fontSize: 19,
         fontFamily: "Josefin",
+        color:colors.white
     },
 });
