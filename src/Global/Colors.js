@@ -1,7 +1,6 @@
 export const colors = {
     red: "#FF6666",
     peach: "#FF8989",
-    pink: "#FCAEAE",
     lightPink: "#FFEADD",
     darkRed: "#8B0000",
     maroon: "#800000",
@@ -29,7 +28,7 @@ export const colors = {
     plum: "#DDA0DD",
     lavender: "#E6E6FA",
     magenta: "#FF00FF",
-    violet: "#EE82EE",
+    pink: "#EE82EE",
     white: "#FFFFFF",
     snow: "#FFFAFA",
     ivory: "#FFFFF0",
@@ -42,5 +41,6 @@ export const colors = {
     darkGray: "#A9A9A9",
     lightGray: "#D3D3D3",
     black: "#000000",
-    silly: 'rainbow'
-};
+    silly: 'rainbow',
+    limeGreen:'#90EE90',
+}
