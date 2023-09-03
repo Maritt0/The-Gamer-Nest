@@ -30,7 +30,7 @@ export default Home
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#006400',
+    backgroundColor:'#000080',
     paddingTop: 40,
     alignItems: 'center',   
   },
