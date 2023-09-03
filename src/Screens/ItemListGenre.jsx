@@ -65,10 +65,12 @@ export default ItemListGenre
 const styles = StyleSheet.create({
     container: {
         height: '100%',
-        backgroundColor:'#006400',
+        backgroundColor:'#000080',
         alignItems: 'center'
     }
 })
+
+
 
 
 
