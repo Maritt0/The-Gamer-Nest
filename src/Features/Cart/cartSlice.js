@@ -1,47 +1,76 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const cartSlice = createSlice({
-    name: "Cart",
-    initialState: {
-        value: {
-            user: "Hardcoder user",
-            updatedAt: "",
-            total: null,
-            items: []
-        }
+  name: "Cart",
+  initialState: {
+    value: {
+      user: "Hardcoder user",
+      updatedAt: "",
+      total: null,
+      items: [],
+      orders: [], 
     },
-    reducers: {
-        addCartItem: (state, action) => {
-            //Logic to add item
-            //1. Check productExists
-            const productExists = state.value.items.some(item => item.id === action.payload.id)
+  },
+  reducers: {
+    saveOrder: (state, action) => {
+  
+      const { items, total, user, updatedAt } = action.payload;
 
-            //2. Distinct logic if exists product or not
-            if (productExists) {
-                state.value.items = state.value.items.map(item => {
-                    if (item.id === action.payload.id) {
-                        item.quantity += action.payload.quantity
-                        return item
-                    }
-                    return item
-                })
-            } else state.value.items.push(action.payload)
+     
+      const newOrder = {
+        items,
+        total,
+        user,
+        updatedAt,
+      };
+      
+      state.value.orders.push(newOrder);
+    
+      state.value.items = [];
+    },
+    addCartItem: (state, action) => {
+  
+      const { id, quantity } = action.payload;
+      const itemIndex = state.value.items.findIndex((item) => item.id === id);
 
-            //3. Update total
-            state.value.total = state.value.items.reduce(
-                (acc, currentItem) => acc += currentItem.price * currentItem.quantity,
-                0
-            )
+      if (itemIndex !== -1) {
+        state.value.items[itemIndex].quantity += quantity;
+      } else {
+        state.value.items.push(action.payload);
+      }
 
-            //4. Update updatedAt
-            state.value.updatedAt = new Date().toLocaleString()
-        },
-        removeCartItem: (state,action) => {
-            //Logic to remove item
+      state.value.total = state.value.items.reduce(
+        (acc, currentItem) =>
+          acc + currentItem.price * currentItem.quantity,
+        0
+      );
+
+      state.value.updatedAt = new Date().toLocaleString();
+    },
+    removeCartItem: (state, action) => {
+      
+      const { id, quantity } = action.payload;
+      const itemIndex = state.value.items.findIndex((item) => item.id === id);
+
+      if (itemIndex !== -1) {
+        if (state.value.items[itemIndex].quantity > quantity) {
+          state.value.items[itemIndex].quantity -= quantity;
+        } else {
+          state.value.items.splice(itemIndex, 1);
         }
-    }
-})
 
-export const {addCartItem, removeCartItem} = cartSlice.actions
+        state.value.total = state.value.items.reduce(
+          (acc, currentItem) =>
+            acc + currentItem.price * currentItem.quantity,
+          0
+        );
 
-export default cartSlice.reducer
+        state.value.updatedAt = new Date().toLocaleString();
+      }
+    },
+  },
+});
+
+export const { addCartItem, removeCartItem, saveOrder } = cartSlice.actions;
+
+export default cartSlice.reducer;
