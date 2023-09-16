@@ -37,33 +37,36 @@ const styles = StyleSheet.create({
     container: {
         paddingHorizontal: 10,
         borderRadius: 5,
-        alignSelf: "flex-end",
         marginBottom: 15,
         alignItems: "center",
         width:'40%',
-        backgroundColor: colors.indigo,
-        padding: 5
+        backgroundColor: colors.black,
+        
     },
     buttonsContainer: {
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+       
     },
     button: {
-        padding: 10,
-        backgroundColor: colors.black
+        padding: 12,
+        backgroundColor: colors.black,
+        
     },
     span: {
         backgroundColor: colors.black,
-        width: "50%",
+        width: "30%",
         padding: 10,
         textAlign: "center",
-        fontSize: 14,
-        color:colors.white
+        fontSize: 15,
+        color:colors.white,
+        height:'100%',
     },
     buttonText: {
-        fontSize: 19,
+        fontSize: 15,
         fontFamily: "Josefin",
         color:colors.white
     },
 });
+
