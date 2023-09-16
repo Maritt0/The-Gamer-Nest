@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { colors } from "../Global/Colors";
 import {
   Button,
   Image,
@@ -8,62 +8,79 @@ import {
   View,
   useWindowDimensions,
 } from "react-native";
+import React, { useEffect, useState } from "react";
 import allProducts from "../Data/products.json";
-import { colors } from "../Global/Colors";
-import Counter from "../Components/Counter";
+import { useDispatch } from "react-redux";
+import { addCartItem } from "../Features/Cart/cartSlice";
 
-const ItemDetail = ({route}) => {
-  const { productId: idSelected } = route.params;
+const ItemDetail = ({ 
+  navigation,
+  route
+}) => {
+
+  const {productId: idSelected} = route.params
+
+  const dispatch = useDispatch()
 
   const [product, setProduct] = useState(null);
+  const [orientation, setOrientation] = useState("portrait");
   const { width, height } = useWindowDimensions();
-  const isLandscape = width > height;
 
   useEffect(() => {
-    const productSelected = allProducts.find(
-      (product) => product.id === idSelected
-    );
-    setProduct(productSelected);
+      if (width > height) setOrientation("landscape");
+      else setOrientation("portrait");
+  }, [width, height]);
+
+  useEffect(() => {
+      //Encontrar el producto por su id
+      const productSelected = allProducts.find(
+          (product) => product.id === idSelected
+          );
+      setProduct(productSelected);
   }, [idSelected]);
 
+  const onAddCart = () => {
+      dispatch(addCartItem({
+          ...product,
+          quantity: 1
+      }))
+  }
+        
+
   return (
-    <View style={styles.pageContainer}>
-      {product && (
-        <View
-          style={[
-            styles.mainContainer,
-            isLandscape && styles.mainContainerLandscape,
-          ]}
-        >
-          <Image
-            source={{ uri: product.images[0] }}
-            style={styles.image}
-            resizeMode="cover"
-          />
-          <View style={styles.textContainer}>
-            <Text style={styles.titleText}>{product.title}</Text>
-            <Text style={styles.descriptionText}>{product.description}</Text>
-            <Text style={styles.priceText}>${product.price}</Text>
-            <Pressable
-              style={styles.addButton}
-              onPress={() => {
-              
-              }}
-            >
-              <Text style={styles.buttonText}>Add to Cart</Text>
-            </Pressable>
-            <Counter style={styles.Counter} />
-          </View>
-        </View>
-      )}
-    </View>
+      <View>
+          {product ? (
+              <View
+                  style={
+                      orientation === "portrait"
+                          ? styles.mainContainer
+                          : styles.mainContainerLandscape
+                  }
+              >
+                  <Image
+                      source={{ uri: product.images[0] }}
+                      style={styles.image}
+                      resizeMode="cover"
+                  />
+                  <View style={styles.textContainer}>
+                      <Text style = {styles.text1}>{product.title}</Text>
+                      <Text style = {styles.text2}>{product.description}</Text>
+                      <Text style = {styles.text3}>${product.price}</Text>
+                      <Button title="Add cart"
+                          onPress={onAddCart}
+                      ></Button>
+                  </View>
+              </View>
+          ) : null}
+      </View>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   pageContainer: {
     flex: 1,
-    backgroundColor: colors.indigo,
     justifyContent: "center",
     alignItems: "center"
   },
@@ -73,14 +90,14 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: 20,
-    backgroundColor: colors.indigo,
-    elevation: 5
+    padding: 48,
+    elevation: 5,
+    backgroundColor: colors.indigo
   },
-  mainContainerLandscape: {
+    mainContainerLandscape: {
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
   },
   image: {
     width: 398,
@@ -88,38 +105,23 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   textContainer: {
-    padding: 8
+    padding:12,
+    display: 'flex', 
   },
-  titleText: {
-    fontSize: 22,
-    fontWeight: "bold",
+  buttonATC: {
+    backgroundColor: colors.blue,
+  },
+  text1: {
     color: colors.white,
-    marginBottom: 8
+    fontSize: 17,
   },
-  descriptionText: {
-    fontSize: 16,
+  text2: {
     color: colors.white,
-    marginBottom: 15
+    padding: 5
   },
-  priceText: {
-    fontSize: 20,
-    fontWeight: "bold",
+  text3: {
     color: colors.white,
-    marginBottom: 15
-  },
-  addButton: {
-    paddingHorizontal: 10,
-    borderRadius: 5,
-    alignSelf: "flex-end",
-    marginBottom: 15
-  },
-  buttonText: {
-    color: colors.white,
-    fontSize: 16,
-    border: '5px solid #000',
-    borderRadius:5,
-    backgroundColor: colors.black
-  },
+    padding: 2
+  }
 });
-
 export default ItemDetail;
