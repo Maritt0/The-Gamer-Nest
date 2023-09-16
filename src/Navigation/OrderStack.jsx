@@ -10,8 +10,7 @@ const OrderStack = () => {
     return (
         <Stack.Navigator
             initialRouteName="OrderScreen"
-            screenOptions={
-                ({ route, navigation }) => ({
+            screenOptions={({ route, navigation }) => ({
                 header: () => {
                     return <Header route={route} navigation={navigation} />;
                 },
