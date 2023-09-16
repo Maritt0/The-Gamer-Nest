@@ -1,23 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { TouchableOpacity, StyleSheet, Text, View } from "react-native";
 import { colors } from "../Global/Colors";
-import { Entypo } from "@expo/vector-icons";
 
 const CartItem = ({ cartItem }) => {
-    console.log(cartItem);
     return (
-        <View style={styles.card} onPress={() => {}}>
+        <TouchableOpacity style={styles.card} onPress={() => {
+            // Handle the tap event here
+        }}>
             <View style={styles.textContainer}>
                 <Text style={styles.text}>{cartItem.title} ({cartItem.quantity})</Text>
                 <Text style={styles.text2}>{cartItem.brand}</Text>
                 <Text style={styles.text2}>${cartItem.price}</Text>
             </View>
-            <Entypo name="trash" size={30} color="black" />
-        </View>
+        </TouchableOpacity>
     );
 };
-
-export default CartItem;
 
 const styles = StyleSheet.create({
     card: {
@@ -32,7 +29,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     textContainer: {
-        width: "70%",
+        width: "100%",
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "flex-start",
@@ -48,3 +45,5 @@ const styles = StyleSheet.create({
         color: '#f0ffff',
     },
 });
+
+export default CartItem;
