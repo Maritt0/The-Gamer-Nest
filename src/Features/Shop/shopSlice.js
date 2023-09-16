@@ -16,12 +16,12 @@ export const shopSlice = createSlice({
             state.value.productsSelected = state.value.allProducts.filter(product => product.genre === action.payload)
             state.value.genreSelected = action.payload
         },
-        setIdSelected: (state, action) => {
+        setIdSelected: (state,action) => {
             state.value.idSelected = action.payload
         }
     }
 })
 
-export const { setGenreSelected, setIdSelected } = shopSlice.actions
+export const {setGenreSelected, setIdSelected} = shopSlice.actions
 
 export default shopSlice.reducer
