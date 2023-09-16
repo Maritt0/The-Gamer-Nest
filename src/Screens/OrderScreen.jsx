@@ -1,31 +1,28 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import OrderData from '../Data/orders.json'
-import OrderItem from '../Components/OrderItem'
+import React from "react";
+import { FlatList, StyleSheet, View } from "react-native";
+import { useSelector } from "react-redux";
+import OrderItem from "../Components/OrderItem"; 
 
-const OrderScreen = () => {
+function OrderScreen() {
+  
+  const fulfilledCarts = useSelector(
+    (state) => state.cartReducer.value.orders
+  );
+
   return (
-    <View style={styles.container}>
-        <FlatList
-            data={OrderData}
-            keyExtractor={orderItem => orderItem.id}
-            renderItem={({item}) => {
-                return (
-                    <OrderItem 
-                      order={item}
-                    />
-                )
-            }}
-        />
-    </View>
-  )
+    <FlatList
+      data={fulfilledCarts}
+      keyExtractor={(order) => order.updatedAt.toString()}
+      renderItem={({ item }) => <OrderItem order={item} />}
+    />
+  );
 }
-
-export default OrderScreen
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000080',
+    backgroundColor: "#000080",
   },
-})
+});
+
+export default OrderScreen;
