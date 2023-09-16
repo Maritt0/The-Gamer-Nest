@@ -1,9 +1,10 @@
-import { useFonts } from 'expo-font';
-import Navigator from './src/Navigation/Navigator';
-import { Provider } from 'react-redux';
-import store from './src/Store/store';
-import { dropTableSessions, init } from './src/SQLite';
 import { useEffect } from 'react';
+import { useFonts } from 'expo-font';
+import { Provider } from 'react-redux';
+import Navigator from './src/Navigation/Navigator';
+import store from './src/Store/store';
+import { init } from './src/SQLite';
+import { fonts } from './src/Assets/Fonts';
 
 
 export default function App() {
@@ -11,19 +12,12 @@ export default function App() {
   useEffect(()=> {
     init()
       .then((result)=> {
-        console.log('Db initialized/dropped')
-        console.log(result);
       })
       .catch(err => {
-        console.log("Initialization DB failed:");
-        console.log(err.message);
     })
   }, [])
   
-  const [fontsLoaded] = useFonts({
-    'Josefin': require('./src/Assets/Fonts/Josefin_Sans/JosefinSans-Regular.ttf'),
-    'Ubuntu': require('./src/Assets/Fonts/Ubuntu/Ubuntu-Regular.ttf')
-  });
+  const [fontsLoaded] = useFonts(fonts);
 
   if (!fontsLoaded) {
     return null;
